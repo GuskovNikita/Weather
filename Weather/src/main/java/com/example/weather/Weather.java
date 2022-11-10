@@ -46,21 +46,14 @@ public class Weather {
             boolean isMorning = valueLn.text().contains("Утро");
             boolean isAfternoon = valueLn.text().contains("День");
             boolean isEvening = valueLn.text().contains("Вечер");
-            boolean isNight = valueLn.text().contains("Ночь");
 
             if (isMorning){
                 iterationCount = 3;
-            }
-            else if (isAfternoon){
+            } else if (isAfternoon){
                 iterationCount = 2;
+            } else if (isEvening){
+                iterationCount = 5;
             }
-            else if (isEvening){
-                iterationCount = 1;
-            }
-            else if (isNight){
-                iterationCount = 0;
-            }
-
         }
 
         for (int i = 0; i < iterationCount; i++) {
